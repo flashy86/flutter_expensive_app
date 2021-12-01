@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -14,7 +16,7 @@ class ChartBar extends StatelessWidget {
       builder: (ctx, constraints) {
         return Column(
           children: <Widget>[
-            Container(
+            SizedBox(
               height: constraints.maxHeight * 0.15,
               child: FittedBox(
                 child: Text('€${spendingAmount.toStringAsFixed(0)}'),
@@ -23,7 +25,7 @@ class ChartBar extends StatelessWidget {
             SizedBox(
               height: constraints.maxHeight * 0.05,
             ),
-            Container(
+            SizedBox(
               height: constraints.maxHeight * 0.6,
               width: 10,
               child: Stack(
@@ -50,7 +52,7 @@ class ChartBar extends StatelessWidget {
             SizedBox(
               height: constraints.maxHeight * 0.05,
             ),
-            Container(
+            SizedBox(
               height: constraints.maxHeight * 0.15,
               child: FittedBox(
                   child: Text(
